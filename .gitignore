@@ -35,3 +35,4 @@
 /config/master.key
 client_secrets.json
 
+.DS_Store
