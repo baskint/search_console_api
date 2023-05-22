@@ -1,6 +1,12 @@
-require_relative "boot"
+require_relative 'boot'
 
-require "rails/all"
+require 'rails/all'
+
+require 'google/apis/webmasters_v3'
+require 'googleauth'
+require 'googleauth/stores/file_token_store'
+require 'omniauth'
+require 'omniauth/google_oauth2'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -18,5 +24,8 @@ module WebmasterApp
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    Webmasters = Google::Apis::WebmastersV3
+
   end
 end
